@@ -1,0 +1,31 @@
+# 교원 명단·평가 결과가 담긴 엑셀·한글 파일은 GitHub에 올리지 않음
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+*.hwp
+*.hwpx
+!assets/template/*.hwpx
+*.json
+!tools/sample-data.json
+
+# 개인 메모
+*.txt
+
+# Claude Code 미리보기 설정
+.claude/
+
+# 관리자용 파일 (tools/build_local.py로 만듦)
+관리자용 파일/
+
+# 백업 파일 (평가 자료가 암호화되어 들어 있음)
+*.phs
+
+# 배포용 파일 등 만들어진 HTML (프로그램 본체·체험판·가짜 배포 파일만 올림)
+*.html
+!index.html
+!demo.html
+!테스트 자료/가짜 *배포용 파일*.html
+
+# 가짜(역사 인물) 정량평가 자기평가서는 올림
+!테스트 자료/가짜 정량평가 자기평가서/*.hwpx
