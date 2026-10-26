@@ -996,7 +996,7 @@
           <div class="qpaper-wrap">
             <div class="qpaper" id="qForm">
               <h3 class="qp-title">정량평가 자기평가서</h3>
-              <div class="qp-sub"><span>2026학년도</span><span>빛여울초등학교</span></div>
+              <div class="qp-sub"><span id="qpYear">2026학년도</span><span id="qpSchool">빛여울초등학교</span></div>
               <table class="qp">
                 <colgroup><col style="width:9%"><col style="width:10%"><col style="width:16%"><col style="width:8.5%"><col style="width:7%"><col style="width:26%"><col style="width:23.5%"></colgroup>
                 <thead><tr><th>평가요소</th><th>평가지표</th><th>세부기준</th><th>배점</th><th>점수</th><th>실적 내용</th><th>비고</th></tr></thead>
@@ -1079,7 +1079,7 @@
                 <div class="sp-sec"><b>1. 평가 지침</b><p>근무성적평정의 신뢰성과 타당성이 보장되도록 객관적 근거에 따라 종합적으로 평가하여야 한다.</p></div>
                 <div class="sp-sec"><b style="display:inline">2. 평가 기간 :</b> &nbsp;&nbsp;&nbsp;&nbsp;<span id="sPeriod" style="white-space:pre"></span></div>
                 <div class="sp-sec"><b>3. 평가자 인적사항</b>
-                  <div class="sp-row3"><span>○ 소속 : 빛여울초등학교</span><span class="sp-f">○ 직위 : <select class="sin" id="sPosition" aria-label="직위"><option>초등교사</option><option>보건교사</option><option>영양교사</option><option>사서교사</option><option>특수교사</option><option value="직접입력">직접 입력</option></select><input class="sin" id="sPositionCustom" placeholder="직위를 입력" hidden></span><span>○ 성명 : <b id="sName"></b></span></div>
+                  <div class="sp-row3"><span>○ 소속 : <span id="spSchool">빛여울초등학교</span></span><span class="sp-f">○ 직위 : <select class="sin" id="sPosition" aria-label="직위"><option>초등교사</option><option>보건교사</option><option>영양교사</option><option>사서교사</option><option>특수교사</option><option value="직접입력">직접 입력</option></select><input class="sin" id="sPositionCustom" placeholder="직위를 입력" hidden></span><span>○ 성명 : <b id="sName"></b></span></div>
                 </div>
                 <div class="sp-sec"><b>4. 평가자 기초 자료</b><div class="sp-grid"><div class="sp-f">○ 담당 학년 및 학급: <input class="sin" data-s="cls" placeholder="예: 4학년 2반"></div><div class="sp-f">○ 주당 수업시간 수: <input class="sin" data-s="hours" placeholder="예: 23시간"></div><div class="sp-f">○ 담당 과목: <input class="sin" data-s="subj" placeholder="예: 4학년 전 과목"></div><div class="sp-f">○ 연간 수업공개 실적: <select class="sin" data-sc="open" aria-label="연간 수업공개 실적"></select><input class="sin sc-custom" data-scc="open" placeholder="직접 입력" hidden></div><div class="sp-f">○ 담임 여부: <input class="sin" data-s="homeroom" placeholder="예: 담임"></div><div class="sp-f">○ 연간 학생 상담 실적: <input class="sin" data-s="stu" placeholder="예: 45회"></div><div class="sp-f">○ 담당 업무: <input class="sin" data-s="duty" placeholder="예: 교무기획"></div><div class="sp-f">○ 연간 학부모 상담 실적: <input class="sin" data-s="par" placeholder="예: 30회"></div><div class="sp-f">○ 보직교사 여부: <input class="sin" data-s="head" placeholder="예: 해당 없음"></div><div class="sp-f-etc"><div class="sp-f">○ 그 밖의 실적사항: <select class="sin" data-sc="etc" aria-label="그 밖의 실적사항"><option>해당 없음</option><option value="직접입력">직접 입력</option></select></div><textarea class="sc-custom sc-area" data-scc="etc" rows="2" placeholder="그 밖의 실적사항을 적어 주세요 (여러 줄 가능)" hidden></textarea></div></div></div>
                 <div class="sp-sec"><b>5. 자기실적 평가</b><div class="sp-area">가. 학습지도</div><div class="sp-item">○ 학습지도 추진 목표(학년 초에 계획되었던 학습지도 목표)<textarea data-s="g1" rows="2" placeholder="한 줄에 하나씩 적으면 줄마다 '- '가 붙습니다"></textarea></div><div class="sp-item">○ 학습지도 추진 실적(학년 초에 목표한 내용과 대비하여 추진 실적을 구체적으로 작성)<textarea data-s="g2" rows="2" placeholder="한 줄에 하나씩 적으면 줄마다 '- '가 붙습니다"></textarea></div><div class="sp-area">나. 생활지도</div><div class="sp-item">○ 생활지도 추진 목표<textarea data-s="l1" rows="2" placeholder="한 줄에 하나씩 적으면 줄마다 '- '가 붙습니다"></textarea></div><div class="sp-item">○ 생활지도 추진 실적<textarea data-s="l2" rows="2" placeholder="한 줄에 하나씩 적으면 줄마다 '- '가 붙습니다"></textarea></div><div class="sp-area">다. 전문성개발</div><div class="sp-item">○ 전문성개발 추진 목표<textarea data-s="p1" rows="2" placeholder="한 줄에 하나씩 적으면 줄마다 '- '가 붙습니다"></textarea></div><div class="sp-item">○ 전문성개발 추진 실적<textarea data-s="p2" rows="2" placeholder="한 줄에 하나씩 적으면 줄마다 '- '가 붙습니다"></textarea></div><div class="sp-area">라. 담당 업무</div><div class="sp-item">○ 담당 업무 추진 목표<textarea data-s="d1" rows="2" placeholder="한 줄에 하나씩 적으면 줄마다 '- '가 붙습니다"></textarea></div><div class="sp-item">○ 담당 업무 추진 실적<textarea data-s="d2" rows="2" placeholder="한 줄에 하나씩 적으면 줄마다 '- '가 붙습니다"></textarea></div><div class="sp-item">○ 창의적 업무개선 사항<textarea data-s="d3" rows="2" placeholder="한 줄에 하나씩 적으면 줄마다 '- '가 붙습니다"></textarea></div>
@@ -2088,6 +2088,9 @@ function setCellText(tc, text) {
 // 양식 section0.xml을 입력한 내용으로 채움
 function fillQuantXml(xml, q, name, evaluators = []) {
   const s = quantScore(q);
+  // 양식 위쪽의 '2026학년도' · '빛여울초등학교' → 기본 세팅의 학년도·학교 이름
+  xml = xml.replace(/<hp:t>\d{4}학년도<\/hp:t>/g, `<hp:t>${xmlEsc(str(state.info.year))}학년도</hp:t>`)
+    .replace(/<hp:t>(\s*)[가-힣]+초등학교<\/hp:t>/g, (m, sp) => `<hp:t>${sp}${xmlEsc(schoolFull())}</hp:t>`);
   // 2쪽 '작성 예시'는 빼고, 그 안의 체크 모양만 가져다 씀
   let compose = null;
   const ex = xml.indexOf('(작성 예시)');
@@ -2205,6 +2208,8 @@ function renderQuant() {
     $('qPreviewMe').value = list.includes(state.qme) ? state.qme : '';
   }
   $('qMeName').textContent = state.me;
+  $('qpYear').textContent = `${str(state.info.year)}학년도`;
+  $('qpSchool').textContent = schoolFull();
   const L = applyQuantLock();
   const q = state.quant;
   $('qHours').value = str(q.hours); $('qStu').value = str(q.stu); $('qPar').value = str(q.par); $('qTrain').value = str(q.train);
@@ -2592,6 +2597,8 @@ function headerAdd(h, listTag, itemTag, xmlFor) {
 // 양식(section0.xml, header.xml)을 입력한 내용으로 채움
 function fillSelfXml(xml, header, d, name) {
   let h = header;
+  // 소속: 기본 세팅의 학교 이름
+  xml = xml.replace(/(<hp:t>○ 소속：)[^<]*(<\/hp:t>)/, (m, a, b) => `${a}${xmlEsc(schoolFull())}${b}`);
   // 고른 '만족·보통·미흡'을 네모로 두르는 글자 모양 (글자 테두리)
   let r = headerAdd(h, 'borderFills', 'borderFill', id =>
     `<hh:borderFill id="${id}" threeD="0" shadow="0" centerLine="NONE" breakCellSeparateLine="0"><hh:slash type="NONE" Crooked="0" isCounter="0"/><hh:backSlash type="NONE" Crooked="0" isCounter="0"/>` +
@@ -3285,6 +3292,7 @@ function renderSelfChoices() {
 }
 function renderSelfMarks() {
   const pd = selfPeriod(state.info.year), sp = ' '.repeat(3);
+  $('spSchool').textContent = schoolFull();
   $('sDateYear').textContent = pd.from;
   $('sPeriod').textContent = `${pd.from}년${sp}3월${sp}1일부터${sp}${sp}${pd.to}년${sp}2월${sp}${pd.febEnd}일까지`;
   const s = state.self, name = selfName() || '';

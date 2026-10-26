@@ -8,7 +8,12 @@ const a = lines.findIndex(l => l.startsWith('const COUNT_PT'));
 let b = lines.findIndex((l, i) => i > a && l.startsWith('function fillQuantXml'));
 while (!lines[b].startsWith('}')) b++;
 const grabFn = n => { const i = lines.findIndex(l => l.startsWith('function ' + n)); let j = i; while (!lines[j].startsWith('}')) j++; return lines.slice(i, j + 1).join('\n'); };
-const src = lines.slice(a, b + 1).join('\n') + '\n' + grabFn('mergeSummary');
+// 앱에서 가져다 쓰는 것: 학년도·학교 이름 (tools/sample-data.json의 가짜 학교)
+const sample = JSON.parse(fs.readFileSync(path.join(root, 'tools/sample-data.json'), 'utf8'));
+const stub = `const str = v => (v === null || v === undefined) ? '' : String(v).trim();
+const state = { info: { year: ${JSON.stringify(String(sample.year))} } };
+const schoolFull = () => ${JSON.stringify(sample.school + '초등학교')};`;
+const src = stub + '\n' + lines.slice(a, b + 1).join('\n') + '\n' + grabFn('mergeSummary');
 const { fillQuantXml, quantScore } = new Function(src + '\nreturn { fillQuantXml, quantScore };')();
 const evaluators = ['을지문덕', '계백', '김유신', '원효', '장보고', '왕건', '강감찬', '의천'];
 const people = [
